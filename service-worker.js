@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.5a9db4505381f6a38b9fbe62faf9b256.js"
+  "precache-manifest.647fb79e0fcd22eb0159728dea019dfc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "restaurant"});
