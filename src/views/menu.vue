@@ -2,7 +2,7 @@
     #menu
         .header
             .img
-              img(src='/img/logo.png')
+              img(:src="'./img/logo.png'")
             .slogan
               h1 美味難以忘懷
               h2 Here's the main attraction

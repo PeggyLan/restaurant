@@ -2,7 +2,7 @@
   <div id="Story" class="d-flex justify-content-center flex-column">
       <div class="abc"></div>
       <div class="logo_img" style="opacity:0.1;">
-        <img src="/img/logo1.png" alt="">
+        <img :src="'./img/logo1.png'" alt="">
       </div>
       <div class="stamp d-flex justify-content-center align-items-center">About Us</div>
         <div class="text text-justify">
