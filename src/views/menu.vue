@@ -1,7 +1,7 @@
 <template lang="pug">
     #menu
         .header
-            .img
+            .img(:style="{background: 'url(./img/menu_bg.jpg) center/cover'}")
               img(:src="'./img/logo.png'")
             .slogan
               h1 美味難以忘懷

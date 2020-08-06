@@ -6,7 +6,7 @@
           <div class="d-flex mb-3">
             <img class="member_card_logo" :src="'./img/member_card_logo.png'" alt="">
             <div class="member_img col-xl-5">
-              <img src="/img/member_img.jpg" alt="" width="300px">
+              <img :src="'./img/member_img.jpg'" alt="" width="300px">
             </div>
             <div class="member_in col-xl-6">
               <h3>admin</h3>
