@@ -103,8 +103,24 @@ export default {
         .then(res => {
           if (res.data.success) {
             this.axios.post(process.env.VUE_APP_APIURL + '/getuser')
-              .catch(() => {
-                alert('發生錯誤')
+              .then(res => {
+                this.datas = res.data.result.map(d => {
+                  return {
+                    name: d.name,
+                    account: d.account,
+                    email: d.email,
+                    phone: d.phone,
+                    edit: false,
+                    model: {
+                      name: d.name,
+                      account: d.account,
+                      email: d.email,
+                      phone: d.phone
+                    }
+                  }
+                })
+              }).catch(error => {
+                this.$vs.dialog('錯誤', `${error.response.data.message}`, 'error')
               })
           }
         })
