@@ -4,7 +4,7 @@
       <b-row class="flex-column">
         <div class="member_card bg-light" style="width:500px;height:300px;border-radius:20px">
           <div class="d-flex mb-3">
-            <img class="member_card_logo" src="/img/member_card_logo.png" alt="">
+            <img class="member_card_logo" :src="'./img/member_card_logo.png'" alt="">
             <div class="member_img col-xl-5">
               <img src="/img/member_img.jpg" alt="" width="300px">
             </div>
@@ -14,7 +14,7 @@
               <h4>1996/08/30</h4>
             </div>
           </div>
-          <img src="/img/barcode.gif" alt="">
+          <img :src="'./img/barcode.gif'" alt="">
         </div>
         <div class="centerx d-flex">
           <div class="mt-5 text-center d-flex">
