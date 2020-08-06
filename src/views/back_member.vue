@@ -102,7 +102,7 @@ export default {
       })
         .then(res => {
           if (res.data.success) {
-            this.axios.post(process.env.VUE_APP_APIURL + 'getuser')
+            this.axios.post(process.env.VUE_APP_APIURL + '/getuser')
               .catch(() => {
                 alert('發生錯誤')
               })
@@ -117,7 +117,7 @@ export default {
     },
     update (tr, indextr) {
       console.log(indextr)
-      this.axios.patch(process.env.VUE_APP_APIURL + 'updateuser', tr)
+      this.axios.patch(process.env.VUE_APP_APIURL + '/updateuser', tr)
         .then(response => {
           tr.edit = false
           this.datas[indextr].name = tr.model.name

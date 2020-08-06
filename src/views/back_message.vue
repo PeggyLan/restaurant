@@ -46,7 +46,7 @@ export default {
     },
     onRowSelected (items) {
       this.selected = items
-      this.axios.patch(process.env.VUE_APP_APIURL + 'updatemessag', { data: this.selected })
+      this.axios.patch(process.env.VUE_APP_APIURL + '/updatemessag', { data: this.selected })
         .then()
         .catch(error => {
           console.log(error)
@@ -57,7 +57,7 @@ export default {
     }
   },
   mounted: function () {
-    this.axios.get(process.env.VUE_APP_APIURL + 'getmessage')
+    this.axios.get(process.env.VUE_APP_APIURL + '/getmessage')
       .then(res => {
         this.form = res.data.result
         for (const i in this.form) {
