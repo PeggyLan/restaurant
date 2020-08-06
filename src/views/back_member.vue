@@ -97,7 +97,7 @@ export default {
         text: '已順利刪除所選項目'
       })
       console.log(this.datas[this.selectid].account)
-      this.axios.post(process.env.VUE_APP_APIURL + 'deleteuser', {
+      this.axios.post(process.env.VUE_APP_APIURL + '/deleteuser', {
         account: this.datas[this.selectid].account
       })
         .then(res => {
