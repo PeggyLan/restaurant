@@ -97,12 +97,12 @@ export default {
         text: '已順利刪除所選項目'
       })
       console.log(this.datas[this.selectid].account)
-      this.axios.post('http://localhost:3000/deleteuser', {
+      this.axios.post(process.env.VUE_APP_APIURL + 'deleteuser', {
         account: this.datas[this.selectid].account
       })
         .then(res => {
           if (res.data.success) {
-            this.axios.post('http://localhost:3000/getuser')
+            this.axios.post(process.env.VUE_APP_APIURL + 'getuser')
               .catch(() => {
                 alert('發生錯誤')
               })
@@ -117,7 +117,7 @@ export default {
     },
     update (tr, indextr) {
       console.log(indextr)
-      this.axios.patch('http://localhost:3000/updateuser', tr)
+      this.axios.patch(process.env.VUE_APP_APIURL + 'updateuser', tr)
         .then(response => {
           tr.edit = false
           this.datas[indextr].name = tr.model.name
